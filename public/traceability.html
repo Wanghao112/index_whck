@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>溯源管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- STYLESHEETS --><!--[if lt IE 9]>
+    <script src="../js/flot/excanvas.min.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../css/cloud-admin.css" >
+    <link rel="stylesheet" type="text/css"  href="../css/themes/default.css" id="skin-switcher" >
+    <link href="../common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- DATE RANGE PICKER -->
+    <!-- FONTS -->
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <!-- PAGE SPECIFIC STYLES -->
+    <!--timeline-->
+
+    <link href="../common/font-awesome/css/font-awesome.min.css" media="all" rel="stylesheet">
+    <link href="../css/timeline.css" media="all" rel="stylesheet">
+    <script src="../js/modernizr.min.js"></script>
+
+</head>
+<body>
+<!-- HEADER -->
+<header class="navbar clearfix" id="header">
+    <div class="container">
+        <div class="navbar-brand">
+            <!-- LOGO -->
+            <a href="index.html">
+                <img src="../common/img/logo/logo.png" alt="Cloud Admin Logo" class="img-responsive" height="30" width="120">
+            </a>
+            <!-- /LOGO -->
+            <!-- 导航缩放 -->
+            <div id="sidebar-collapse" class="sidebar-collapse btn">
+                <i class="fa fa-bars"
+                   data-icon1="fa fa-bars"
+                   data-icon2="fa fa-bars" ></i>
+            </div>
+            <!-- /导航缩放 -->
+        </div>
+        <!-- 主题样式 -->
+        <ul class="nav navbar-nav pull-left hidden-xs" id="navbar-left">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-cog"></i>
+                    <span class="name">主题样式</span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu skins">
+                    <li class="dropdown-title">
+                        <span><i class="fa fa-leaf"></i>更改主题样式</span>
+                    </li>
+                    <li><a href="#" data-skin="default">默认主题</a></li>
+                    <li><a href="#" data-skin="night">Night主题</a></li>
+                    <li><a href="#" data-skin="earth">Earth主题</a></li>
+                    <li><a href="#" data-skin="utopia">Utopia主题</a></li>
+                    <li><a href="#" data-skin="nature">Nature主题</a></li>
+                    <li><a href="#" data-skin="graphite">Graphite主题</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /主题样式 -->
+        <!-- 用户信息 -->
+        <ul class="nav navbar-nav pull-right">
+            <li class="dropdown user" id="header-user">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img alt="" src="../common/img/avatars/avatar3.jpg" />
+                    <span class="username">技术员</span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="user_message.html"><i class="fa fa-user"></i>我的信息</a></li>
+                    <li><a href="user_change.html"><i class="fa fa-cog"></i>信息完善</a></li>
+                    <li><a href="password_change.html"><i class="fa fa-eye"></i>密码更改</a></li>
+                    <li><a href="login.html"><i class="fa fa-power-off"></i>注销</a></li>
+                </ul>
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+        </ul>
+        <!-- /用户信息 -->
+    </div>
+</header>
+<!--/HEADER -->
+<!-- PAGE -->
+<section id="page">
+<!-- 导航栏 -->
+<div id="sidebar" class="sidebar">
+    <div class="sidebar-menu nav-collapse">
+        <div class="divide-20"></div>
+        <!-- 搜索功能 -->
+        <div id="search-bar">
+            <input class="search" type="text" placeholder="Search"><i class="fa fa-search search-icon"></i>
+        </div>
+        <!-- /搜索功能 >
+        <!-- 导航菜单 -->
+        <ul>
+            <li class="has-sub">
+                <a href="javascript:;" class="">
+                    <i class="fa fa-th-large fa-fw"></i> <span class="menu-text">基本模块</span>
+                    <span class="arrow open"></span>
+                    <span class="selected"></span>
+                </a>
+                <ul class="sub">
+                    <li><a class=""  href="index.html"><span class="sub-menu-text">实时调控</span></a></li>
+                    <li><a class="" href="surveillance_video.html"><span class="sub-menu-text">视频监控</span></a></li>
+                    <li><a class=""  href="others.html"><span class="sub-menu-text">数据分析</span></a></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="javascript:;" class="">
+                    <i class="fa fa-bookmark-o fa-fw"></i> <span class="menu-text">扩展功能</span>
+                    <span class="arrow open"></span>
+                    <span class="selected"></span>
+                </a>
+                <ul class="sub">
+                    <li class=""><a class="" href="#"><span class="sub-menu-text">在线查询</span></a></li>
+                    <li><a class="" href="#"><span class="sub-menu-text">在线监管</span></a></li>
+                    <li><a class="" href="#"><span class="sub-menu-text">休闲农业</span></a></li>
+                </ul>
+            </li>
+            <li class="has-sub  active">
+                <a href="javascript:;" class="">
+                    <i class="fa fa-table fa-fw"></i> <span class="menu-text">后台管理</span>
+                    <span class="arrow open"></span>
+                    <span class="selected"></span>
+                </a>
+                <ul class="sub">
+                    <li  class="current"><a class="" href="traceability.html"><span class="sub-menu-text">溯源管理</span></a></li>
+                    <li><a class="" href="#"><span class="sub-menu-text">在线监管</span></a></li>
+                    <li><a class="" href="#"><span class="sub-menu-text">商务运作</span></a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /导航菜单 -->
+    </div>
+</div>
+<!-- /导航栏 -->
+<div id="main-content">
+    <div class="container">
+        <div class="row">
+            <div id="content" class="col-lg-12">
+                <!-- PAGE HEADER-->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-header">
+                            <!-- STYLER -->
+                            <!-- /STYLER -->
+                            <!-- BREADCRUMBS -->
+                            <ul class="breadcrumb">
+                                <li>
+                                    <i class="fa fa-home"></i>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">后台管理</a>
+                                </li>
+                                <li>溯源管理</li>
+                            </ul>
+                            <!-- /BREADCRUMBS -->
+                            <!-- /天气 -->
+                            <div class="description"><iframe width="420" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=5"></iframe></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /PAGE HEADER -->
+
+                <div class="row">
+                    <form class="navbar-form navbar-left" role="search">
+                        <p class="form-group">溯源查询 ：</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入编码">
+                        </div>
+                        <button type="submit" class="btn btn-default">查询</button>
+                    </form>
+                </div>
+                <div class="row">
+
+                </div>
+                <div class="row">
+                        <div class="timeline animated">
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 30</small>4:53 PM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-primary">
+                                        <i class="fa fa-pencil"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <h2>
+                                            This is a title for this timeline post
+                                        </h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 25</small>6:14 PM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-warning">
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <blockquote>
+                                            <p>
+                                                Lorem ipsum velit ullamco anim pariatur proident eu deserunt laborum. Lorem ipsum ad in nostrud adipisicing cupidatat anim officia ad id cupidatat veniam quis elit ullamco.
+                                            </p>
+                                            <small>John Smith</small></blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 16</small>9:00 AM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-info">
+                                        <i class="fa fa-camera"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <h2>
+                                            This is an image posted on my timeline
+                                        </h2>
+                                        <img class="img-responsive" src="https://lorempixel.com/output/nature-q-c-640-480-10.jpg" />
+                                        <p>
+                                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 12</small>1:14 PM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-primary">
+                                        <i class="fa fa-video-camera"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <h2>
+                                            This is a title for this timeline post
+                                        </h2>
+                                        <div class="video-container">
+                                            <video width="320" height="240" controls loop>
+                                                <source src="../common/video/1973570_733546766712625_1027174560_n (1).mp4"  type="video/mp4">
+                                                您的浏览器不支持 HTML5 video 标签。
+                                            </video>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 10</small>4:53 PM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-primary">
+                                        <i class="fa fa-pencil"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <h2>
+                                            This is a title for this timeline post
+                                        </h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 9</small>6:14 PM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-warning">
+                                        <i class="fa fa-quote-right"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <blockquote>
+                                            <p>
+                                                Lorem ipsum velit ullamco anim pariatur proident eu deserunt laborum. Lorem ipsum ad in nostrud adipisicing cupidatat anim officia ad id cupidatat veniam quis elit ullamco.
+                                            </p>
+                                            <small>John Smith</small></blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 6</small>9:00 AM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-info">
+                                        <i class="fa fa-camera"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <h2>
+                                            This is an image posted on my timeline
+                                        </h2>
+                                        <img class="img-responsive" src="https://lorempixel.com/output/nature-q-c-640-480-10.jpg" />
+                                        <p>
+                                            Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-row">
+                                <div class="timeline-time">
+                                    <small>Oct 2</small>1:14 PM
+                                </div>
+                                <div class="timeline-icon">
+                                    <div class="bg-primary">
+                                        <i class="fa fa-video-camera"></i>
+                                    </div>
+                                </div>
+                                <div class="panel timeline-content">
+                                    <div class="panel-body">
+                                        <h2>
+                                            This is a title for this timeline post
+                                        </h2>
+                                        <video width="320" height="240" controls>
+                                            <source src="../common/video/56d4361f8c0993576.mp4"  type="video/mp4">
+                                            您的浏览器不支持 HTML5 video 标签。
+                                        </video>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+
+                <div class="separator"></div>
+                <div class="footer-tools">
+							<span class="go-top">
+								<i class="fa fa-chevron-up"></i> Top
+							</span>
+                </div>
+            </div><!-- /CONTENT-->
+        </div>
+    </div>
+</div>
+</section>
+<!--/PAGE -->
+<!-- JAVASCRIPTS -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- JQUERY -->
+<script src="../js/jquery/jquery-2.0.3.min.js"></script>
+<!-- JQUERY UI-->
+<script src="../js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+<!-- BOOTSTRAP -->
+<script src="../common/bootstrap-dist/js/bootstrap.min.js"></script>
+
+<!-- DATE RANGE PICKER -->
+<script src="../js/bootstrap-daterangepicker/moment.min.js"></script>
+
+<script src="../js/bootstrap-daterangepicker/daterangepicker.min.js"></script>
+<!-- SLIMSCROLL -->
+<script type="text/javascript" src="../js/jQuery-slimScroll-1.3.0/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="../js/jQuery-slimScroll-1.3.0/slimScrollHorizontal.min.js"></script>
+<!-- BLOCK UI -->
+<script type="text/javascript" src="../js/jQuery-BlockUI/jquery.blockUI.min.js"></script>
+<!-- FLOT CHARTS -->
+
+<!-- FLOT GROWRAF -->
+
+<!-- GAGE -->
+
+<!-- EASY PIE CHART -->
+<script src="../js/jquery-easing/jquery.easing.min.js"></script>
+<script type="text/javascript" src="../js/easypiechart/jquery.easypiechart.min.js"></script>
+<!-- SPARKLINES -->
+
+<!-- COOKIE -->
+<script type="text/javascript" src="../js/jQuery-Cookie/jquery.cookie.min.js"></script>
+<!-- CUSTOM SCRIPT -->
+<script src="../js/script.js"></script>
+<script src="../js/timeline.js"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        App.setPage("others");  //Set current page
+        App.init(); //Initialise plugins and elements
+
+    });
+</script>
+<!-- /JAVASCRIPTS -->
+</body>
+</html>
