@@ -215,34 +215,94 @@
                     </div>
                     <!-- /PAGE HEADER -->
                     <div class="row">
-                        <form class="navbar-form navbar-left" role="search">
-                            <p class="form-group">姓名 ：</p>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="请输入编码">
+
+                        <div class="col-md-6">
+                            <div class="box border green">
+                                <div class="box-title">
+                                    <h4><i class="fa fa-bars"></i>General Information</h4>
+                                </div>
+                                <div class="box-body big">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>Basic Information</h4>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Name</label>
+                                                <div class="col-md-8"><input type="text" name="regular" class="form-control" value="Jennifer"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Birthday</label>
+                                                <div class="col-md-8"><input  class="form-control datepicker" type="text" name="regular" size="10"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Gender</label>
+                                                <div class="col-md-8">
+                                                    <label class="radio"> <input type="radio" class="uniform" name="optionsRadios1" value="option1"> Male </label>
+                                                    <label class="radio"> <input type="radio" class="uniform" name="optionsRadios1" value="option2" checked> Female </label>
+                                                </div>
+                                            </div>
+                                            <h4>Contact Information</h4>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Phone</label>
+                                                <div class="col-md-8"><input type="number" name="regular" class="form-control" value="1002927323"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Address</label>
+                                                <div class="col-md-8"><textarea name="regular" class="form-control"></textarea></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Website</label>
+                                                <div class="col-md-8">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">http://</span>
+                                                        <input type="text" class="form-control" placeholder="Website">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <br><br>
-                            <p class="form-group">地址 ：</p>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="请输入编码">
+                        </div>
+                        <div class="col-md-6 form-vertical">
+                            <div class="box border inverse">
+                                <div class="box-title">
+                                    <h4><i class="fa fa-bars"></i>Profile Settings</h4>
+                                </div>
+                                <div class="box-body big">
+                                    <h4>Security Settings</h4>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Secure Browsing</label>
+                                        <div class="col-md-8">
+                                            <label class="checkbox-inline"> <input type="checkbox" class="uniform" value="" checked> Enable </label>
+                                            <label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> Disable </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Login Notifications</label>
+                                        <div class="col-md-8">
+                                            <label class="checkbox-inline"> <input type="checkbox" class="uniform" value=""> Enable </label>
+                                            <label class="checkbox-inline"> <input type="checkbox" class="uniform" value="" checked> Disable </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Recognized Devices</label>
+                                        <div class="col-md-8">
+                                            <label class="checkbox"> <input type="checkbox" class="uniform" value="" checked> Apple iPhone </label>
+                                            <label class="checkbox"> <input type="checkbox" class="uniform" value="" checked> Samsung Galaxy Note 3 </label>
+                                            <label class="checkbox"> <input type="checkbox" class="uniform" value=""> Google Nexus 5 </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">Active sessions</label>
+                                        <div class="col-md-8">
+                                            <div class="divide-10"></div>
+                                            <p>Logged in from <a href="#"><strong>New York, US</strong></a> and <a href="#">6 other</a> locations</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <br><br>
-                            <p class="form-group">年龄 ：</p>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="请输入编码">
-                            </div>
-                            <br><br>
-                            <p class="form-group">性别 ：</p>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="请输入编码">
-                            </div>
-                            <br><br>
-                            <p class="form-group">电话 ：</p>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="请输入编码">
-                            </div>
-                            <br><br>
-                            <button type="submit" class="btn btn-default">保存</button>
-                        </form>
+                        </div>
                     </div>
                     <div class="separator"></div>
                     <div class="footer-tools">
