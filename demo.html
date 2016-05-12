@@ -1,21 +1,25 @@
 <html>
 <head>
-    <script type="application/x-javascript">
-        function draw() {
-            var canvas = document.getElementByIdx_x("canvas");
-            if (canvas.getContext) {
-                var ctx = canvas.getContext("2d");
+    <script language="javascript" type="text/javascript" src="jquery-1.6.1.js"></script>
 
-                ctx.fillStyle = "rgb(200,0,0)";
-                ctx.fillRect (10, 10, 55, 50);
-
-                ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-                ctx.fillRect (30, 30, 55, 50);
-            }
+    <script language="javascript" type="text/javascript">
+        /**
+         * 页面加载完成后显示页面
+         */
+        function showPage(){
+            $('#divPageLoading').hide();
+            $('#divPageBody').show();
         }
     </script>
+
 </head>
-<body onload="draw();">
-<canvas id="canvas" width="150" height="150"></canvas>
+
+<body onload="showPage();">
+<div id="divPageLoading">
+    <img src="392.gif" style="width:120px;height:120px;position:absolute;left:45%;top:40%;"/>
+</div>
+<div id="divPageBody" style="display:none;">
+    ……
+</div>
 </body>
 </html>
