@@ -35,6 +35,8 @@
 <!--仪活在java中的优秀前端耗子表盘-->
 <script src="../js/raphael.2.1.0.min.js"></script>
 <script src="../js/justgage.1.0.1.js"></script>
+    <!--时分秒-->
+<script language="javascript" type="text/javascript" src="../js/my97datepicker/WdatePicker.js"></script>
 
 <!--/仪表盘-->
 <link rel="stylesheet"
@@ -329,45 +331,27 @@
 										<tr>
 											<th>开始时刻</th>
 											<th>结束时刻</th>
-											<th>运行时长</th>
+											<th>开度</th>
 											<th>间歇时长</th>
 											<th>#</th>
 										</tr>
 									</thead>
 									<tbody id="goods">
 										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
+											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
 											<td align="center"><button class="btn btn-danger bnt-xs"
 													onclick="del(this)">
 													<i class="fa fa-trash-o"></i> 删除
 												</button></td>
 										</tr>
 										<tr>
-											<td><input type="input" id="my_date"></td>
-                                            <script>
-                                                var yourTime=xxxx/xx/xx;
-                                                $("#my_date").attr('value',yourTime);
-                                            </script>
-											<td><input type="text" name="lname" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td align="center"><button class="btn btn-danger bnt-xs"
-													onclick="del(this)">
-													<i class="fa fa-trash-o"></i> 删除
-												</button></td>
+
 										</tr>
 										<tr>
-											<td></td>
-											<td></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td align="center"><button class="btn btn-danger bnt-xs"
-													onclick="del(this)">
-													<i class="fa fa-trash-o"></i> 删除
-												</button></td>
+
 										</tr>
 									</tbody>
 								</table>
@@ -385,44 +369,44 @@
 								<table class="table table-bordered">
 									<thead>
 										<tr>
-											<th>传感器</th>
-											<th>变量</th>
-											<th>上限值</th>
-											<th>下限值</th>
-											<th>#</th>
+											<th>传感器1</th>
+											<th>传感器1</th>
+											<th>传感器1</th>
+											<th>传感器1</th>
+
 										</tr>
 									</thead>
 									<tbody id="goodss">
 										<tr>
-											<td><input type="text"></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td align="center"><button class="btn btn-danger bnt-xs"
-													onclick="del(this)">
-													<i class="fa fa-trash-o"></i> 删除
-												</button></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
 										</tr>
 										<tr>
-											<td><input type="text"></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td align="center"><button class="btn btn-danger bnt-xs"
-													onclick="del(this)">
-													<i class="fa fa-trash-o"></i> 删除
-												</button></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
 										</tr>
 										<tr>
-											<td><input type="text"></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td><input type="number" name="points" min="1" max="10" /></td>
-											<td align="center"><button class="btn btn-danger bnt-xs"
-													onclick="del(this)">
-													<i class="fa fa-trash-o"></i> 删除
-												</button></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
 										</tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
 									</tbody>
 								</table>
 							</div>
