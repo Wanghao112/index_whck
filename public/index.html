@@ -50,9 +50,21 @@
         //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
         //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
     </script>
+    <script>
+         $(function(){
+             $("#").click(function(){
+                 var url="";
+                 var args="";
+                 $.getJSON(url,args,function(data){
+                     $("input[name='newsletter']").text(data.bookname);
+                     $("input[name='newsletter']").text(data.bookname);
+                     $("input[name='newsletter']").text(data.bookname);
+                 });
+             })
+         })
+    </script>
 </head>
 <body onload="st();">
-
 	<!-- HEADER -->
 	<header class="navbar clearfix" id="header">
 		<div class="container">
@@ -321,8 +333,8 @@
 								<div class="form-group col-md-5 col-md-offset-3">
 									<label>时间参数配置</label>
 								</div>
-								<button class="btn btn-info" onclick="add(this)">
-									<i class="fa fa-plus"></i> 添加
+								<button class="btn btn-info">
+									<i class="fa "></i> 配置
 								</button>
 							</div>
 							<div class="row">
@@ -333,22 +345,62 @@
 											<th>结束时刻</th>
 											<th>开度</th>
 											<th>间歇时长</th>
-											<th>#</th>
+
 										</tr>
 									</thead>
 									<tbody id="goods">
 										<tr>
+											<td><input id="" readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
 											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
-											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
-											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
-											<td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
-											<td align="center"><button class="btn btn-danger bnt-xs"
-													onclick="del(this)">
-													<i class="fa fa-trash-o"></i> 删除
-												</button></td>
-										</tr>
-										<tr>
+											<td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+											<td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
 
+										</tr>
+                                        <tr>
+                                            <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                                            <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                                            <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                                            <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                                        </tr>
+										<tr>
+                                            <td colspan="4">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox1" value="option1"> 星期一
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox2" value="option2"> 星期二
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox3" value="option3"> 星期三
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox4" value="option4"> 星期四
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox5" value="option5"> 星期五
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox6" value="option6"> 星期六
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" id="inlineCheckbox7" value="option7"> 星期日
+                                                </label>
+                                            </td>
 										</tr>
 										<tr>
 
@@ -361,14 +413,15 @@
 								<div class="form-group col-md-5 col-md-offset-3">
 									<label>传感器关联</label>
 								</div>
-								<button class="btn btn-info" onclick="add1(this)">
-									<i class="fa fa-plus"></i> 添加
+								<button class="btn btn-info">
+									<i class="fa"></i>配置
 								</button>
 							</div>
 							<div class="row">
 								<table class="table table-bordered">
 									<thead>
 										<tr>
+                                            <th>#</th>
 											<th>传感器1</th>
 											<th>传感器1</th>
 											<th>传感器1</th>
@@ -378,35 +431,101 @@
 									</thead>
 									<tbody id="goodss">
 										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td></td>
+                                            <td>上限动作</td>
+											<td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+											<td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+											</td>
+											<td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+											</td>
+											<td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+											</td>
 										</tr>
 										<tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>上限值</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
 										</tr>
 										<tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>中间动作</td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
 										</tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>下限值</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                                            <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td>下线动作</td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select style="width: 80px">
+                                                    <option>开启</option>
+                                                    <option>关闭</option>
+                                                </select>
+                                            </td>
                                         </tr>
+
 									</tbody>
 								</table>
 							</div>
@@ -419,6 +538,226 @@
 					</div>
 				</div>
 			</div>
+            <div class="modal fade bs-example-modal-sm" id="box-config3"
+                 tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+                 aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
+                <h4 class="modal-title">时间参数配置</h4>
+            </div>
+            <div class="modal-body">
+            <div class="row" align="center">
+                <div class="form-group col-md-5 col-md-offset-3">
+                    <label>时间参数配置</label>
+                </div>
+                <button class="btn btn-info">
+                    <i class="fa "></i> 配置
+                </button>
+            </div>
+            <div class="row">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>开始时刻</th>
+                        <th>结束时刻</th>
+                        <th>开度</th>
+                        <th>间歇时长</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="goods">
+                    <tr>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                    </tr>
+                    <tr>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                    </tr>
+                    <tr>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                    </tr>
+                    <tr>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input readonly="readonly" type="text"onfocus="WdatePicker({dateFmt:'HH:mm:ss'})" style="width: 80px"/></td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>分钟</td>
+
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 星期一
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> 星期二
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 星期三
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox4" value="option4"> 星期四
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox5" value="option5"> 星期五
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox6" value="option6"> 星期六
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox7" value="option7"> 星期日
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row" align="center">
+                <div class="form-group col-md-5 col-md-offset-3">
+                    <label>传感器关联</label>
+                </div>
+                <button class="btn btn-info">
+                    <i class="fa"></i>配置
+                </button>
+            </div>
+            <div class="row">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>传感器1</th>
+                        <th>传感器1</th>
+                        <th>传感器1</th>
+                        <th>传感器1</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="goodss">
+                    <tr>
+                        <td>上限动作</td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上限值</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                    </tr>
+                    <tr>
+                        <td>中间动作</td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>下限值</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                        <td><input type="number" min="0" max="100" style="width: 80px"/>%</td>
+                    </tr>
+                    <tr>
+                        <td>下线动作</td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select style="width: 80px">
+                                <option>开启</option>
+                                <option>关闭</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+            </div>
+            </div>
+            </div>
             <!--地图弹出框-->
             <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg">
@@ -518,13 +857,13 @@
 											</button>
 										</a> <a href="#box-config2" data-toggle="modal" class="config"
 											style="float: right">
-											<button class="btn btn-info" onclick="add1(this)"
+											<button class="btn btn-info" onclick=""
 												style="line-height: 5px">
 												<i class="fa fa-plus"></i> 添加传感器
 											</button>
 										</a> <a href="#box-config" data-toggle="modal" class="config"
 											style="float: right">
-											<button class="btn btn-info" onclick="add1(this)"
+											<button class="btn btn-info" onclick=""
 												style="line-height: 5px">
 												<i class="fa fa-plus"></i> 添加设备
 											</button>
@@ -909,18 +1248,12 @@
 			</div>
 		</div>
 	</section>
-
-
 	<!--/PAGE -->
 	<!-- JAVASCRIPTS -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<!-- JQUERY -->
 	<script src="../js/jquery/jquery-2.0.3.min.js"></script>
 	<!--拖动效果的实现-->
-
-
-
-
 	<!-- JQUERY UI-->
 	<script
 		src="../js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
@@ -1008,7 +1341,6 @@
 			App.init(); //Initialise plugins and elements
 		});
 	</script>
-
 	<!-- /JAVASCRIPTS -->
 </body>
 </html>

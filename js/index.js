@@ -46,7 +46,7 @@ function add(btn) {
     var tbody = document.getElementById("goods");
     tbody.appendChild(ntr);
 }
-function add1(btn) {
+/**function add1(btn) {
     var ntr = document.createElement("tr")
     ntr.innerHTML =
         '<td><input type="text"></td>'+
@@ -56,7 +56,7 @@ function add1(btn) {
         '<td align="center"><button class="btn btn-danger bnt-xs" onclick="del(this)"><i class="fa fa-trash-o"></i> 删除</button></td>';
     var tbody = document.getElementById("goodss");
     tbody.appendChild(ntr);
-}
+}*/
 function del(btn) {
     var tr = btn.parentNode.parentNode;
     tr.parentNode.removeChild(tr);

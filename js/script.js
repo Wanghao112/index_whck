@@ -1997,7 +1997,7 @@ var App = function () {
       });
       
         setInterval(function() {
-          g1.refresh(getRandomInt(0, 100));
+          g1.refresh(50);
           g2.refresh(getRandomInt(0, 100));          
           g3.refresh(getRandomInt(0, 100));
           g4.refresh(getRandomInt(0, 100));
