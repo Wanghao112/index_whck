@@ -8,19 +8,10 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- STYLESHEETS --><!--[if lt IE 9]>
-    <script src="../js/flot/excanvas.min.js"></script>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
 	<link rel="stylesheet" type="text/css" href="../css/cloud-admin.css" >
-	
 	<link href="../common/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-	<!-- DATE RANGE PICKER -->
-	<link rel="stylesheet" type="text/css" href="../js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
-	<!-- UNIFORM -->
 	<link rel="stylesheet" type="text/css" href="../js/uniform/css/uniform.default.min.css" />
-	<!-- ANIMATE -->
-	<link rel="stylesheet" type="text/css" href="css/animatecss/animate.min.css" />
-	<!-- FONTS -->
 	<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="login">	
@@ -41,7 +32,7 @@
 				<!--/NAV-BAR -->
 			</header>
 			<!--/HEADER -->
-			<!-- LOGIN -->
+			<!-- 登录 -->
 			<section id="login" class="visible">
 				<div class="container">
 					<div class="row">
@@ -49,7 +40,7 @@
 							<div class="login-box-plain">
 								<h2 class="bigintro">登录</h2>
 								<div class="divide-40"></div>
-								<form role="form" id="loginform" action="index.html">
+								<form role="form" id="loginform" action="">
 								  <div class="form-group">
 									<label for="email">帐号</label>
 									<i class="fa fa-user"></i>
@@ -63,11 +54,11 @@
 
 								  <div class="form-actions">
                                       <label class="checkbox"> <input type="checkbox" class="uniform" value="">记住密码</label>
-									<button type="submit" class="btn btn-danger">登录</button>
+
+									  <input type="button" class="btn btn-default" value="登录" style="display: block;"/>
 								  </div>
 								</form>
 								<!-- SOCIAL LOGIN -->
-
 								<!-- /SOCIAL LOGIN -->
 								<div class="login-helpers">
 									<a href="#" style="text-decoration:none;" onclick="swapScreen('forgot');return false;">忘记密码?</a> <br>
@@ -80,7 +71,7 @@
 				</div>
 			</section>
 			<!--/LOGIN -->
-			<!-- REGISTER -->
+			<!-- 注册 -->
 			<section id="register">
 				<div class="container">
 					<div class="row">
@@ -155,7 +146,7 @@
 								</form>
 								<!-- SOCIAL REGISTER -->
 
-								<!-- /SOCIAL REGISTER -->
+								<!-- 返回登录 -->
 								<div class="login-helpers">
 									<a href="#" style="text-decoration:none;" onclick="swapScreen('login');return false;">返回登录</a> <br>
 								</div>
@@ -237,16 +228,11 @@
 			<!-- FORGOT PASSWORD -->
 	</section>
 	<!--/PAGE -->
-	<!-- JAVASCRIPTS -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<!-- JQUERY -->
 	<script src="../js/jquery/jquery-2.0.3.min.js"></script>
 	<!-- JQUERY UI-->
 	<script src="../js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
 	<!-- BOOTSTRAP -->
 	<script src="../common/bootstrap-dist/js/bootstrap.min.js"></script>
-	
-	
 	<!-- UNIFORM -->
 	<script type="text/javascript" src="../js/uniform/jquery.uniform.min.js"></script>
 	<!-- CUSTOM SCRIPT -->
